@@ -14,6 +14,7 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public AudioSource caughtAudio;
     public TMP_Text countdownTimer; 
+    public TMP_Text sprintText;
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
     bool m_HasAudioPlayed;
@@ -54,6 +55,7 @@ public class GameEnding : MonoBehaviour
     void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
         countdownTimer.SetText("");
+        sprintText.SetText("");
 
         if(!m_HasAudioPlayed)
         {
